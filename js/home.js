@@ -1,5 +1,11 @@
+function Obtener()
+{
+  let SeleccionGenero=document.getElementById("combo").value;
+  
+  console.log(SeleccionGenero);
 
-//obtiene la referencia al contenedor main
+  if(SeleccionGenero==="Todo"){
+    //obtiene la referencia al contenedor main
 const main = document.querySelector(".main");
 
 /* consigue el listado de generos */
@@ -76,3 +82,10 @@ const construirTarjetas = (id, data) => {
     }
   });
 };
+
+ let seleccionado=document.getElementById("combo");
+ let seleccionar=seleccionado.value;
+ console.log(seleccionar);
+  }
+  
+}
