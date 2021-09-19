@@ -24,9 +24,8 @@ function Obtener()
   if(SeleccionGenero==="Todo"){
     contenedorEnCines.innerHTML="";
     ContenedorClasificacion.innerHTML="";
-    contenedorgeneros.innerHTML="";
     contenedorAnios.innerHTML="";
-    FiltroAnios.innerHTML="";
+    FiltroGenero.innerHTML="";
     contenedorSeriesTV.innerHTML="";
     ContenedorAdultos.innerHTML="";
     main.innerHTML="";
@@ -112,14 +111,12 @@ const construirTarjetas = (id, data) => {
   //Filtrar Por Genero
 }else if(SeleccionGenero==="Genero"){
   contenedorEnCines.innerHTML="";
-  ContenedorClasificacion.innerHTML="";
-  contenedorgeneros.innerHTML="";
-  contenedorAnios.innerHTML="";
-  FiltroAnios.innerHTML="";
-  contenedorSeriesTV.innerHTML="";
-  ContenedorAdultos.innerHTML="";
-  main.innerHTML="";
-FiltroAnios.innerHTML="";
+    ContenedorClasificacion.innerHTML="";
+    contenedorAnios.innerHTML="";
+    FiltroGenero.innerHTML="";
+    contenedorSeriesTV.innerHTML="";
+    ContenedorAdultos.innerHTML="";
+    main.innerHTML="";
   fetch(
     genres_list_http +
       new URLSearchParams({
@@ -144,10 +141,13 @@ contenedorgeneros.innerHTML=crearListaGeneros;
     }
     //Filtrar por año
 }else if(SeleccionGenero==="Año"){
+  contenedorEnCines.innerHTML="";
   ContenedorClasificacion.innerHTML="";
-  main.innerHTML="";
+  contenedorAnios.innerHTML="";
   FiltroGenero.innerHTML="";
-  contenedorgeneros.innerHTML="";
+  contenedorSeriesTV.innerHTML="";
+  ContenedorAdultos.innerHTML="";
+  main.innerHTML="";
 for(i=1980;i<=2023;i++){
 crearListaAnios+=`<br><input type="checkbox" id=${i} value=${i}>${i}</label>`
 
@@ -158,9 +158,8 @@ FiltroAnios.innerHTML=crearListaAnios;
 }else if(SeleccionGenero==="Clasificacion R"){
   contenedorEnCines.innerHTML="";
   ContenedorClasificacion.innerHTML="";
-  contenedorgeneros.innerHTML="";
   contenedorAnios.innerHTML="";
-  FiltroAnios.innerHTML="";
+  FiltroGenero.innerHTML="";
   contenedorSeriesTV.innerHTML="";
   ContenedorAdultos.innerHTML="";
   main.innerHTML="";
@@ -231,13 +230,12 @@ data.forEach((item, i) => {
 //Mostrando peliculas que se estan presentando en Cines
 }else if(SeleccionGenero==="En Cines"){
   contenedorEnCines.innerHTML="";
-  ContenedorClasificacion.innerHTML="";
-  contenedorgeneros.innerHTML="";
-  contenedorAnios.innerHTML="";
-  FiltroAnios.innerHTML="";
-  contenedorSeriesTV.innerHTML="";
-  ContenedorAdultos.innerHTML="";
-  main.innerHTML="";
+    ContenedorClasificacion.innerHTML="";
+    contenedorAnios.innerHTML="";
+    FiltroGenero.innerHTML="";
+    contenedorSeriesTV.innerHTML="";
+    ContenedorAdultos.innerHTML="";
+    main.innerHTML="";
   //obtiene la referencia al contenedor main
 
 
@@ -304,13 +302,12 @@ data.forEach((item, i) => {
 };
 }else if(SeleccionGenero==="Para Adultos"){
   contenedorEnCines.innerHTML="";
-  ContenedorClasificacion.innerHTML="";
-  contenedorgeneros.innerHTML="";
-  contenedorAnios.innerHTML="";
-  FiltroAnios.innerHTML="";
-  contenedorSeriesTV.innerHTML="";
-  ContenedorAdultos.innerHTML="";
-  main.innerHTML="";
+    ContenedorClasificacion.innerHTML="";
+    contenedorAnios.innerHTML="";
+    FiltroGenero.innerHTML="";
+    contenedorSeriesTV.innerHTML="";
+    ContenedorAdultos.innerHTML="";
+    main.innerHTML="";
   //obtiene la referencia al contenedor main
   const fetchListaPeliculasPorAdulto = () => {
     fetch(
@@ -381,9 +378,8 @@ data.forEach((item, i) => {
 }else if(SeleccionGenero==="Series de TV"){
   contenedorEnCines.innerHTML="";
   ContenedorClasificacion.innerHTML="";
-  contenedorgeneros.innerHTML="";
   contenedorAnios.innerHTML="";
-  FiltroAnios.innerHTML="";
+  FiltroGenero.innerHTML="";
   contenedorSeriesTV.innerHTML="";
   ContenedorAdultos.innerHTML="";
   main.innerHTML="";
