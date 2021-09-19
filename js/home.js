@@ -314,29 +314,20 @@ data.forEach((item, i) => {
   //obtiene la referencia al contenedor main
   const fetchListaPeliculasPorAdulto = () => {
     fetch(
-      movie_genres_http +
+      movies_adultos +
         new URLSearchParams({
           api_key: api_key,
           language:"es-MX",
+          adult:true,
           page: Math.floor(Math.random() * 3) + 1, //trae pagina al azar
         })
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.results);
-        console.log(data);
-        var datosporadulto=[]
+       
         //console.log(data.results[0].release_date.split("-")[0]+Anio);
-        for(i=0;i<data.results.length;i++){
-  
-          if(data.results[i].adult===true){
-            datosporadulto.push(data.results[i]);
-            console.log(datosporadulto);
-          }
-          console.log(datosporadulto);
-        }
-        console.log(datosporadulto);
-        construirElementoCategoria(`Peliculas_Para_Adultos`, datosporadulto);
+       
+        construirElementoCategoria(`Peliculas_Para_Adultos`, data.results);
       })
       .catch((err) => console.log(err));
   };
