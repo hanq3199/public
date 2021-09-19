@@ -6,3 +6,6 @@ let movie_genres_http = "https://api.themoviedb.org/3/discover/movie?";
 let original_img_url = "https://image.tmdb.org/t/p/original";
 let movie_detail_http = "https://api.themoviedb.org/3/movie";
 
+let movies_certification= "https://api.themoviedb.org/3/discover/movie/?certification_country=US&certification=R&sort_by=vote_average.desc"
+let movies_cines= "https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2021-09-15&primary_release_date.lte=2021-10-22"
+let programas_tv= "https://api.themoviedb.org/3/discover/tv?"
